@@ -10,10 +10,29 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.red,
-        body: Center(
+        body: SafeArea(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      children: [Icon(Icons.home, size: 36), Text('Logo')],
+                    ),
+                    Column(
+                      children: [
+                        Icon(Icons.notifications, size: 36),
+                        Text('Sino'),
+                      ],
+                    ),
+                    Column(
+                      children: [Icon(Icons.person, size: 36), Text('Perfil')],
+                    ),
+                  ],
+                ),
+              ),
               Text(
                 'Institutional Learning App',
                 style: TextStyle(fontSize: 20, color: Colors.black),
@@ -32,7 +51,7 @@ class App extends StatelessWidget {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
-                  foregroundColor: Colors.red,
+                  foregroundColor: const Color.fromARGB(255, 65, 58, 57),
                 ),
                 onPressed: () {
                   // Add your button action here
